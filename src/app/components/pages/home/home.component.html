@@ -1,0 +1,19 @@
+<!-- <p>home works!</p> -->
+<ul>
+  <li *ngFor="let food of foods">
+    <a routerLink="/food/{{food.id}}">
+      <img [src]="food.imageUrl" [alt]="food.name">
+      <div class="content">
+        <div class="name">
+          {{food.name}}
+        </div>
+        <span class="favorite {{food.favorite? '':'not'}}">♥</span>
+        <div class="stars">
+          <start-rating
+          [value]="food.stars" [totalstars]="5" [readonly]="true"
+          checkedcolor="red" uncheckedcolor="black" size="22px"></start-rating>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
