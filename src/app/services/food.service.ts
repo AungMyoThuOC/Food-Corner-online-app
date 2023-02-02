@@ -19,7 +19,7 @@ export class FoodService {
   }
 
   // Get Food by Id
-  getFoodByID(foodID:string){
-    return this.getAll().find(food => food.id)?? new Food();
+  getFoodByID(foodId:string){
+    return this.getAll().find(food => food.id == foodId)?? new Food();
   }
 }
