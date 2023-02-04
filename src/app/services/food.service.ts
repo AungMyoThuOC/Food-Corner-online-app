@@ -18,6 +18,16 @@ export class FoodService {
     return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 
+  // Get All Tag
+  // getAllTags():Tag[] {
+  //   return sample_tags
+  // }
+
+  // get Food by Tags
+  // getAllFoodByTag(tag:string):Food[] {
+  //   return tag === "All"? this.getAll():this.getAll().filter(food => food.tags?.includes(tag));
+  // }
+
   // Get Food by Id
   getFoodByID(foodId:string){
     return this.getAll().find(food => food.id == foodId)?? new Food();
