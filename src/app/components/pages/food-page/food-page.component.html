@@ -4,7 +4,7 @@
   notFoundMessage="Food Not Found!"
   restLinkText="Back to Home"
 ></app-not-found>
-<div *ngIf="food.id" class="container">
+<div *ngIf="food" class="container">
   <img [src]="food.imageUrl" [alt]="food.name" />
   <div class="details">
     <div class="header">
