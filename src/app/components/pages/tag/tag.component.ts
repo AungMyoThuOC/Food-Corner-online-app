@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodService } from 'src/app/services/food.service';
-// import { Tag } from 'src/app/shared/model/Tag';
+import { Tag } from 'src/app/shared/model/Tag';
 
 @Component({
   selector: 'app-tag',
@@ -8,11 +8,11 @@ import { FoodService } from 'src/app/services/food.service';
   styleUrls: ['./tag.component.css']
 })
 export class TagComponent  implements OnInit{
-  // tags?Tag[];
+  tags?:Tag[]
   constructor(api:FoodService) {
-    // api.getAllTags().subscribe(serverTag => {
-    //   this.tags = serverTag;
-    // })
+    api.getAllTags().subscribe(serverTag => {
+      this.tags = serverTag;
+    })
   }
 
   ngOnInit(): void {

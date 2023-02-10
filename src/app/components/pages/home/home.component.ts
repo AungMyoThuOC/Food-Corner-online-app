@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
     activateRoute.params.subscribe((params) => {
       if(params.searchTerm)
       foodsObservable = this.api.getAllFoodBySearchTerm(params.searchTerm)
-      // else if(params.tag)
-      // foodsObservable = this.api.getAllFoodByTag(params.tag)
+      else if(params.tag)
+      foodsObservable = this.api.getAllFoodByTag(params.tag)
       else
       foodsObservable = api.getAll()  //get All data return
       foodsObservable.subscribe((serverFoods) => {
